@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="Ameliya Natasha" />
+  <title>Profile — Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="img/logo.jpg" alt="logo" class="logo-small">
+      <h3> Student Portal</h3>
+    </div>
+    <nav class="main-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="courses.html">Courses</a>
+      <a href="results.html">Results</a>
+      <a href="activity.html">Activity</a>
+      <a href="profile.html" class="active">Profile</a>
+      <button id="logoutBtn" class="btn-ghost">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero small-hero">
+      <h1>Student Profile</h1>
+      <p>Personal information</p>
+    </section>
+
+    <section class="card profile-card">
+      <img src="img/pp.jpg" alt="profile photo" class="profile-photo">
+      <div class="profile-info">
+        <h3>NUR AMELIYA NATASHA BINTI ABDUL RAHMAN </h3> 
+        <p><strong>Campus:</strong> UiTM Kampus Machang</p>
+        <p><strong>Program:</strong> Bachelor of Information Science (Hons) Information Systems Management</p>
+        <p><strong>Student ID:</strong> 2025139031</p>
+        <p><strong>Current Semester:</strong> 5 </p>
+        <p><strong>Email:</strong> ameliya.natasha295@gmail.com</p>
+        <p><strong>Student Email:</strong> 2025139031@student.uitm.edu.my</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Social Platform</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/mlyatsha" target="_blank">Instagram — @mlyatsha</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://t.me/mlyatsha" target="_blank">Telegram — @mlyatsha</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://wa.me/0128627902" target="_blank">WhatsApp — 0128627902</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Logout functionality
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      localStorage.removeItem('portalUser'); // Remove session data
+      window.location.href = 'login.html'; // Redirect to login page
+    });
+  </script>
+</body>
+</html>

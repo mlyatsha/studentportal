@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="Ameliya Natasha" />
+  <title>Courses — Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="img/logo.jpg" alt="logo" class="logo-small">
+      <h3> Student Portal</h3>
+    </div>
+    <nav class="main-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="courses.html" class="active">Courses</a>
+      <a href="results.html">Results</a>
+      <a href="activity.html">Activity</a>
+      <a href="profile.html">Profile</a>
+      <button id="logoutBtn" class="btn-ghost">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero small-hero">
+      <h1>Registered Courses</h1>
+      <p>All registered courses for the current academic year</p>
+    </section>
+
+    <section class="card">
+      <table class="data-table" id="coursesTable">
+	  <h3>SEMESTER 5</h3>
+        <thead>
+          <tr><th>Code</th><th>Course</th><th>Credits</th><th>Lecturer</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>IMD310</td><td>INDUSTRIAL TRAINING</td><td>3</td><td>Mdm. Nik</td></tr>
+          <tr><td>IMD313</td><td>FOUNDATION OF ARCHIVES ADMINISTRATION</td><td>4</td><td>Mdm. Arina</td></tr>
+          <tr><td>IMD316</td><td>MULTIMEDIA FOR INFORMATION PRESENTATION</td><td>3</td><td>Mr. Faris</td></tr>
+          <tr><td>IMD317</td><td>OUTREACH PROGRAMS OF INFORMATION AGENCIES</td><td>4</td><td>Mdm. Azreen</td></tr>
+          <tr><td>IMD318</td><td>INTRODUCTION TO WEB CONTENT MANAGEMENT AND DESIGN</td><td>3</td><td>Mr. Adzin</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <table class="data-table" id="coursesTable">
+	  <h3>SEMESTER 4</h3>
+        <thead>
+          <tr><th>Code</th><th>Course</th><th>Credits</th><th>Lecturer</th></tr>
+        </thead>
+        <tbody>			
+			<tr><td>ENT300</td><td>FUNDAMENTALS OF ENTREPRENEURSHIP</td><td>3</td><td>Dr. Yuslina</td></tr>
+			<tr><td>IMC258</td><td>METADATA DEVELOPMENT IN INFORMATION ENVIRONMENT</td><td>3</td><td>Mdm. Amira</td></tr>
+			<tr><td>IMD223</td><td>INTRODUCTION TO CATALOGING</td><td>3</td><td>Ms. Najah</td></tr>
+			<tr><td>IMD261</td><td>DATABASE FOR BUSINESS INFORMATION PROFESSIONALS</td><td>3</td><td>Mdm. Soffiyya</td></tr>
+			<tr><td>IMD262</td><td>INTRODUCTION TO ELECTRONIC RECORDKEEPING</td><td>3</td><td>Mdm. Fatin</td></tr>
+			<tr><td>IMD263</td><td>ELECTRONIC PUBLISHING</td><td>3</td><td>Mdm. Soffiyya</td></tr>
+		</tbody>
+      </table>
+    </section>
+	
+	<section class="card">
+      <table class="data-table" id="coursesTable">
+	  <h3>SEMESTER 3</h3>
+        <thead>
+          <tr><th>Code</th><th>Course</th><th>Credits</th><th>Lecturer</th></tr>
+        </thead>
+        <tbody>
+			<tr><td>CTU264</td><td>ISLAMIC INFORMATION MANAGEMENT</td><td>2</td><td>Mr. Khairul</td></tr>
+			<tr><td>IMD235</td><td>HUMAN COMM FOR INFO PROFESSIONALS</td><td>3</td><td>Mdm. Nik</td></tr>
+			<tr><td>IMD236</td><td>INTRODUCTION TO REFERENCE AND BIBLIOMETRIC</td><td>3</td><td>Mdm. Zaila</td></tr>
+			<tr><td>IMD237</td><td>FUNDAMENTALS OF RECORDS CENTER MANAGEMENT</td><td>3</td><td>Mdm. Noor</td></tr>
+			<tr><td>IMD238</td><td>PROGRAMMING FOR INFORMATION PROFESSIONAL</td><td>4</td><td>Dr. Faiz</td></tr>
+		</tbody>
+      </table>
+    </section>
+	
+	<section class="card">
+      <table class="data-table" id="coursesTable">
+	  <h3>SEMESTER 2</h3>
+        <thead>
+          <tr><th>Code</th><th>Course</th><th>Credits</th><th>Lecturer</th></tr>
+        </thead>
+        <tbody>
+			<tr><td>CTU152</td><td>VALUES AND CIVILIZATION</td><td>2</td><td>Dr. Nazri</td></tr>
+			<tr><td>IMC151</td><td>ORGANIZATION AND ACCESS TO INFORMATION</td><td>3</td><td>Mdm. Amira</td></tr>
+			<tr><td>IMD161</td><td>FOUNDATION OF RECORDS MANAGEMENT</td><td>3</td><td>Mdm. Noor</td></tr>
+			<tr><td>IMD162</td><td>INFORMATION TECHNOLOGY APPLICATION </td><td>3</td><td>Mr. Faris</td></tr>
+			<tr><td>IMD163</td><td>COMPUTER SYSTEM OPERATION</td><td>3</td><td>Mdm. Soffiyya</td></tr>
+			<tr><td>IMD164</td><td>SOCIAL MEDIA LITERACY</td><td>1</td><td>Mdm. Fatin</td></tr>
+        </tbody>
+      </table>
+    </section>
+	
+	<section class="card">
+      <table class="data-table" id="coursesTable">
+	  <h3>SEMESTER 1</h3>
+        <thead>
+          <tr><th>Code</th><th>Course</th><th>Credits</th><th>Lecturer</th></tr>
+        </thead>
+        <tbody>
+			<tr><td>CTU101</td><td>FUNDAMENTALS OF ISLAM</td><td>2</td><td>Dr. Alias</td></tr>
+			<tr><td>IMC111</td><td>INTRODUCTION TO INFORMATION SKILLS</td><td>3</td><td>Mdm. Nik</td></tr>
+			<tr><td>IMC112</td><td>INTRODUCTION TO INFORMATION MANAGEMENT</td><td>4</td><td>Mdm. Nur</td></tr>
+			<tr><td>IMC113</td><td>INFORMATION AND COMMUNICATION</td><td>3</td><td>Ms. Aina</td></tr>
+			<tr><td>MGT162</td><td>FUNDAMENTALS OF MANAGEMENT</td><td>3</td><td>Mdm. Athirah</td></tr>
+			<tr><td>UED102</td><td>STUDY SKILLS</td><td>0</td><td>Mdm. Khadijah</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Logout functionality
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      localStorage.removeItem('portalUser'); // Remove session data
+      window.location.href = 'login.html'; // Redirect to login page
+    });
+  </script>
+</body>
+</html>
+
+
+
