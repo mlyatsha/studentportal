@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="Ameliya Natasha" />
+  <title>Results | Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="img/logo.jpg" alt="logo" class="logo-small">
+      <h3> Student Portal</h3>
+    </div>
+    <nav class="main-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="courses.html">Courses</a>
+      <a href="results.html" class="active">Results</a>
+      <a href="activity.html">Activity</a>
+      <a href="profile.html">Profile</a>
+      <button id="logoutBtn" class="btn-ghost">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero small-hero">
+      <h1>Current Exam Results</h1>
+      <p>View grades and results breakdown</p>
+    </section>
+
+    <section class="card">
+      <table class="data-table" id="resultsTable">
+        <thead>
+          <tr><th>Course</th><th>Credit Hours</th><th>Grade</th><th>Result</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>IMD310</td><td>4</td><td>A+</td><td>LU</td></tr>
+          <tr><td>IMD313</td><td>3</td><td>A</td><td>LU</td></tr>
+          <tr><td>IMD316</td><td>3</td><td>A</td><td>LU</td></tr>
+          <tr><td>IMD317</td><td>4</td><td>A-</td><td>LU</td></tr>
+          <tr><td>IMD318</td><td>3</td><td>B+</td><td>LU</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h3>GPA Breakdown</h3>
+      <canvas id="gpaChart" height="120"></canvas>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Static data for GPA chart
+    const gpaHistory = {
+      semesters: ['Sem1', 'Sem2', 'Sem3', 'Sem4', 'Sem5'],
+      gpa: [3.46, 3.85, 3.76, 3.50, 3.80]
+    };
+
+    const ctx = document.getElementById('gpaChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: gpaHistory.semesters,
+        datasets: [{
+          label: 'GPA',
+          data: gpaHistory.gpa,
+          fill: false,
+          tension: 0.3,
+          borderColor: '#ffdd57', 
+          borderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false, 
+            max: 4, 
+            min: 2.5, 
+            stepSize: 0.5
+          }
+        }
+      }
+    });
+
+    // Logout functionality
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      localStorage.removeItem('portalUser'); 
+      window.location.href = 'index.html'; 
+    });
+  </script>
+</body>
+</html>

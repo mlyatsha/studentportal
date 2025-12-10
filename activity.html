@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="Ameliya Natasha" />
+  <title>Activity | Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="img/logo.jpg" alt="logo" class="logo-small">
+      <h3> Student Portal</h3>
+    </div>
+    <nav class="main-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="courses.html">Courses</a>
+      <a href="results.html">Results</a>
+      <a href="activity.html" class="active">Activity</a>
+      <a href="profile.html">Profile</a>
+      <button id="logoutBtn" class="btn-ghost">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero small-hero">
+      <h1>Activity Gallery</h1>
+      <p>Photos and videos from events and classes</p>
+    </section>
+
+    <section class="card gallery-grid" id="activityGrid">
+      <img src="img/gr1.jpg" alt="Image 1">
+      <img src="img/gr2.jpg" alt="Image 2">
+      <img src="img/gr3.jpg" alt="Image 3">
+      <img src="img/gr4.jpg" alt="Image 4">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Logout functionality
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      localStorage.removeItem('portalUser');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

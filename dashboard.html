@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="Ameliya Natasha" />
+  <title>Dashboard | Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="img/logo.jpg" alt="logo" class="logo-small">
+      <h3> Student Portal</h3>
+    </div>
+
+    <nav class="main-nav">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="courses.html">Courses</a>
+      <a href="results.html">Results</a>
+      <a href="activity.html">Activity</a>
+      <a href="profile.html">Profile</a>
+      <button id="logoutBtn" class="btn-ghost">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero small-hero">
+      <h1>Welcome to Your Dashboard <span id="userWelcome"></span></h1>
+      <p>Overview of the semester</p>
+    </section>
+
+    <section class="cards-row">
+      <div class="card stat-card">
+        <h4>Total Courses</h4>
+        <p>5</p>
+      </div>
+      <div class="card stat-card">
+        <h4>Current CGPA</h4>
+        <p>3.68</p>
+      </div>
+      <div class="card stat-card">
+        <h4>Credits This Sem</h4>
+        <p>17</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>GPA Progress</h3>
+      <canvas id="gpaChart" height="120"></canvas>
+    </section>
+
+    <section class="card">
+      <h3>Current Courses</h3>
+      <table class="data-table" id="recentCoursesTable">
+        <thead>
+          <tr><th>Code</th><th>Name of Course</th><th>Credits Hours</th><th>Semester</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>IMD310</td><td>Industrial Training</td><td>4</td><td>5</td></tr>
+          <tr><td>IMD313</td><td>Foundation of Archives Administration</td><td>3</td><td>5</td></tr>
+          <tr><td>IMD316</td><td>Multimedia for Information Presentation</td><td>3</td><td>5</td></tr>
+          <tr><td>IMD317</td><td>Outreach Programs of Information Agencies</td><td>4</td><td>5</td></tr>
+          <tr><td>IMD318</td><td>Introduction to Web Content Management and Design</td><td>3</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Static data for GPA progress chart
+    const gpaHistory = {
+      semesters: ['Sem1', 'Sem2', 'Sem3', 'Sem4', 'Sem5'],
+      gpa: [3.46, 3.85, 3.76, 3.50, 3.80]
+    };
+
+    // GPA Progress Chart using Chart.js
+    const ctx = document.getElementById('gpaChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: gpaHistory.semesters,
+        datasets: [{
+          label: 'GPA',
+          data: gpaHistory.gpa,
+          fill: false,
+          tension: 0.3,
+          borderColor: '#ffdd57', 
+          borderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false 
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false, 
+            max: 4, // Maximum GPA value
+            min: 2.5, // Minimum GPA value
+            stepSize: 0.5 
+          }
+        }
+      }
+    });
+
+    // Logout functionality
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      localStorage.removeItem('portalUser'); 
+      window.location.href = 'index.html'; 
+    });
+  </script>
+</body>
+</html>
