@@ -7,7 +7,7 @@ This is a student portal application that allows students to log in and access v
 - Courses to view registered courses and their details.
 - Results to check current exam results.
 - Activity to view photos and videos from events and classes.
-- Profile to view and edit personal information.
+- Profile to view personal information.
 
 ## Features
 - Login: Secure login with username and password.
@@ -18,7 +18,7 @@ This is a student portal application that allows students to log in and access v
 - Profile: View personal details and social media links.
 
 ## File Structure
-- login.html: Login page for user authentication.
+- index.html: Login page for user authentication.
 - dashboard.html: Dashboard displaying semester overview and progress.
 - courses.html: Page showing registered courses and their details.
 - results.html: Page displaying exam results.
